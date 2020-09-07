@@ -2,13 +2,14 @@
   "name": "AM-to-CHTML",
   "version": "0.1.0",
   "description": "The MathJax library to convert AsciiMath to CHTML",
-  "main": "index.js",
+  "main": "AMToCHTML.js",
   "keywords": [
     "AM",
     "AsciiMath",
     "CHTML",
     "MathJax"
   ],
+  "repository": "https://github.com/CreateurCreatif/AM-to-CHTML",
   "author": "@CreateurCreatif",
   "license": "MIT",
   "dependencies": {
