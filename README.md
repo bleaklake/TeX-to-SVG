@@ -1,2 +1,3 @@
-# AM-to-CHTML
+# MML-to-SVG
+
 MathJax sub library

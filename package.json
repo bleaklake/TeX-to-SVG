@@ -1,16 +1,16 @@
 {
-  "name": "mml-to-chtml",
+  "name": "mml-to-svg",
   "version": "0.1.0",
-  "description": "The MathJax wrapper to convert MML to CHTML",
+  "description": "The MathJax wrapper to convert MML to SVG",
   "main": "MMLToCHTML.js",
   "keywords": [
-    "CHTML",
+    "SVG",
     "MML",
     "MathJax"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CreatifCreateur/MML-to-CHTML.git"
+    "url": "git+https://github.com/CreatifCreateur/MML-to-SVG.git"
   },
   "author": "@CreateurCreatif",
   "license": "MIT",
@@ -18,9 +18,9 @@
     "mathjax-full": "^3.1.0"
   },
   "bugs": {
-    "url": "https://github.com/CreatifCreateur/MML-to-CHTML/issues"
+    "url": "https://github.com/CreatifCreateur/MML-to-SVG/issues"
   },
-  "homepage": "https://github.com/CreatifCreateur/MML-to-CHTML#readme",
+  "homepage": "https://github.com/CreatifCreateur/MML-to-SVG#readme",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
