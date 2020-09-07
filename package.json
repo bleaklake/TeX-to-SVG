@@ -1,18 +1,28 @@
 {
-  "name": "AM-to-CHTML",
+  "name": "mml-to-chtml",
   "version": "0.1.0",
-  "description": "The MathJax library to convert AsciiMath to CHTML",
-  "main": "AMToCHTML.js",
+  "description": "The MathJax wrapper to convert MML to CHTML",
+  "main": "MMLToCHTML.js",
   "keywords": [
-    "AM",
-    "AsciiMath",
     "CHTML",
+    "MML",
     "MathJax"
   ],
-  "repository": "https://github.com/CreateurCreatif/AM-to-CHTML",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CreatifCreateur/MML-to-CHTML.git"
+  },
   "author": "@CreateurCreatif",
   "license": "MIT",
   "dependencies": {
     "mathjax-full": "^3.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/CreatifCreateur/MML-to-CHTML/issues"
+  },
+  "homepage": "https://github.com/CreatifCreateur/MML-to-CHTML#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

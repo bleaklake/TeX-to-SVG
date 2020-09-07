@@ -7,5 +7,5 @@ declare module "AM-to-CHTML" {
         fontURL?: string
     }
 
-    export default function AMToCHTML(str: string, opts?: options): string;
+    export default function MMLToCHTML(str: string, opts?: options): string;
 }
