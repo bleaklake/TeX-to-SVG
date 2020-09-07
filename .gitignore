@@ -105,3 +105,4 @@ dist
 .gitignore
 .env
 .git/
+package-lock.json
