@@ -1,4 +1,4 @@
-declare module "TeX-to-SVG" {
+declare module "tex-to-svg" {
 
     interface options {
         width?: number,
