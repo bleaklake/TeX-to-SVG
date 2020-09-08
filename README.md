@@ -1,3 +1,3 @@
-# MML-to-SVG
+# TeX-to-SVG
 
 MathJax sub library

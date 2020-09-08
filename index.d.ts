@@ -1,4 +1,4 @@
-declare module "MML-to-SVG" {
+declare module "TeX-to-SVG" {
 
     interface options {
         width?: number,
@@ -6,5 +6,5 @@ declare module "MML-to-SVG" {
         em?: number
     }
 
-    export default function MMLToSVG(str: string, opts?: options): string;
+    export default function TeXToSVG(str: string, opts?: options): string;
 }

@@ -1,9 +1,12 @@
 const { mathjax } = require('mathjax-full/js/mathjax.js');
+const { TeX } = require('mathjax-full/js/input/tex.js');
 const { SVG } = require('mathjax-full/js/output/svg.js');
-const { MathML } = require('mathjax-full/js/input/mathml.js');
 const { liteAdaptor } = require('mathjax-full/js/adaptors/liteAdaptor.js');
 const { RegisterHTMLHandler } = require('mathjax-full/js/handlers/html.js');
 const { AssistiveMmlHandler } = require('mathjax-full/js/a11y/assistive-mml.js');
+
+const { AllPackages } = require('mathjax-full/js/input/tex/AllPackages.js');
+
 
 const DEFAULT_OPTIONS = {
     width: 1280,
@@ -11,18 +14,18 @@ const DEFAULT_OPTIONS = {
     em: 16,
 }
 
-function MMLToSVG(str, opts) {
+function TeXToSVG(str, opts) {
     const options = opts ? { ...DEFAULT_OPTIONS, ...opts } : DEFAULT_OPTIONS;
 
-    const ASSISTIVE_MML = false, FONT_CACHE = true, INLINE = false, CSS = false;
+    const ASSISTIVE_MML = false, FONT_CACHE = true, INLINE = false, CSS = false, packages = AllPackages.sort();
 
     const adaptor = liteAdaptor();
     const handler = RegisterHTMLHandler(adaptor);
     if (ASSISTIVE_MML) AssistiveMmlHandler(handler);
 
-    const mml = new MathML();
+    const tex = new TeX({ packages });
     const svg = new SVG({ fontCache: (FONT_CACHE ? 'local' : 'none') });
-    const html = mathjax.document('', { InputJax: mml, OutputJax: svg });
+    const html = mathjax.document('', { InputJax: tex, OutputJax: svg });
 
     const node = html.convert(str, {
         display: !INLINE,
@@ -39,4 +42,4 @@ function MMLToSVG(str, opts) {
     );
 }
 
-module.exports = MMLToSVG;
+module.exports = TeXToSVG;

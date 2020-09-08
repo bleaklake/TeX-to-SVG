@@ -1,16 +1,16 @@
 {
-  "name": "mml-to-svg",
+  "name": "tex-to-svg",
   "version": "0.1.0",
-  "description": "The MathJax wrapper to convert MML to SVG",
+  "description": "The MathJax wrapper to convert TeX to SVG",
   "main": "MMLToCHTML.js",
   "keywords": [
     "SVG",
-    "MML",
+    "TeX",
     "MathJax"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CreatifCreateur/MML-to-SVG.git"
+    "url": "git+https://github.com/CreatifCreateur/TeX-to-SVG.git"
   },
   "author": "@CreateurCreatif",
   "license": "MIT",
@@ -18,9 +18,9 @@
     "mathjax-full": "^3.1.0"
   },
   "bugs": {
-    "url": "https://github.com/CreatifCreateur/MML-to-SVG/issues"
+    "url": "https://github.com/CreatifCreateur/TeX-to-SVG/issues"
   },
-  "homepage": "https://github.com/CreatifCreateur/MML-to-SVG#readme",
+  "homepage": "https://github.com/CreatifCreateur/TeX-to-SVG#readme",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
