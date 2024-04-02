@@ -1,10 +1,10 @@
 # tex-to-svg
 
+<p align="center">
+  <img width="514" height="295" src="./TeX.svg" alt="tex"/>
+</p>
+
 This MathJax wrapper converts TeX to Scalable Vector Graphics (SVG). This package doesn't use any webworkers, webviews ; so It can be used for your NodeJS, React and React Native projects.
-
-**This project is still in its early development stages.**
-
-For any bugs, typos, errors, feel free to open an issue on the associated Github repository.
 
 ## Installation
 

@@ -1,8 +1,8 @@
 {
   "name": "tex-to-svg",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "The MathJax wrapper to convert TeX to SVG",
-  "main": "TeXToSVG.js",
+  "main": "./TeXToSVG.js",
   "keywords": [
     "SVG",
     "TeX",
@@ -10,17 +10,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CreatifCreateur/TeX-to-SVG.git"
+    "url": "git+https://github.com/bleaklake/TeX-to-SVG.git"
   },
-  "author": "@CreatifCreateur",
+  "author": "@bleaklake",
   "license": "MIT",
   "dependencies": {
-    "mathjax-full": "^3.1.0"
+    "mathjax-full": "^3.2.2"
   },
   "bugs": {
-    "url": "https://github.com/CreatifCreateur/TeX-to-SVG/issues"
+    "url": "https://github.com/bleaklake/TeX-to-SVG/issues"
   },
-  "homepage": "https://github.com/CreatifCreateur/TeX-to-SVG#readme",
+  "homepage": "https://github.com/bleaklake/TeX-to-SVG#readme",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
