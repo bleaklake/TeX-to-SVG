@@ -1,14 +1,15 @@
 # tex-to-svg
 
-<p align="center">
-  <img width="514" height="295" src="./TeX.svg" alt="tex"/>
+<p align="center" style="display:flex; justify-content:space-around;">
+  <img width="128" height="74" src="./assets/TeX.svg" alt="tex"/>
+  <img width="74" height="74" src="./assets/SVG.svg" alt="svg"/>
 </p>
 
 This MathJax wrapper converts TeX to Scalable Vector Graphics (SVG). This package doesn't use any webworkers, webviews ; so It can be used for your NodeJS, React and React Native projects.
 
 ## Installation
 
-```cli
+```cmd
 npm install tex-to-svg --save
 ```
 
@@ -37,7 +38,7 @@ import TeXToSVG from "tex-to-svg";
 
 const myTeXEquation = "\\frac{n!}{k!(n-k)!} = \\binom{n}{k}";
 
-const SVGEquation = TeXToSVG((myTeXEquation); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
+const SVGEquation = TeXToSVG(myTeXEquation); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
 ```
 
 ## Documentation
@@ -62,7 +63,7 @@ const SVGEquation = TeXToSVG((myTeXEquation); // returns <svg style="vertical-al
 
 ### Useful links
 
-This wrapper is inspired by this project : https://github.com/mathjax/MathJax-demos-node/tree/master/direct.
+This wrapper comes from this project : https://github.com/mathjax/MathJax-demos-node/tree/master/direct.
 
 ### Typescript
 

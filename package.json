@@ -22,7 +22,5 @@
   },
   "homepage": "https://github.com/bleaklake/TeX-to-SVG#readme",
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "scripts": {}
 }
