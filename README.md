@@ -1,8 +1,8 @@
 # tex-to-svg
 
 <p align="center" style="display:flex; justify-content:space-around;">
-  <img width="128" height="74" src="./assets/TeX.svg" alt="tex"/>
-  <img width="74" height="74" src="./assets/SVG.svg" alt="svg"/>
+  <img width="128" height="74" src="https://raw.githubusercontent.com/bleaklake/TeX-to-SVG/master/assets/TeX.svg" alt="tex"/>
+  <img width="74" height="74" src="https://raw.githubusercontent.com/bleaklake/TeX-to-SVG/master/assets/SVG.svg" alt="svg"/>
 </p>
 
 This MathJax wrapper converts TeX to Scalable Vector Graphics (SVG). This package doesn't use any webworkers, webviews ; so It can be used for your NodeJS, React and React Native projects.
