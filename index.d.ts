@@ -6,5 +6,7 @@ declare module "tex-to-svg" {
         em?: number
     }
 
-    export default function TeXToSVG(str: string, opts?: options): string;
+    function TeXToSVG(str: string, opts: options, getWidth: Number): { svgString: string, svgWidth: Number };
+    function TeXToSVG(str: string, opts?: options): string;
+    export default TeXToSVG;
 }

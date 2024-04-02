@@ -14,18 +14,28 @@ const DEFAULT_OPTIONS = {
     em: 16,
 }
 
-function TeXToSVG(str, opts) {
+const ASSISTIVE_MML = false, FONT_CACHE = true, INLINE = false, packages = AllPackages.sort().join(', ').split(/\s*,\s*/);
+
+const adaptor = liteAdaptor();
+const handler = RegisterHTMLHandler(adaptor);
+if (ASSISTIVE_MML) AssistiveMmlHandler(handler);
+
+const tex = new TeX({ packages });
+const svg = new SVG({ fontCache: (FONT_CACHE ? 'local' : 'none') });
+const html = mathjax.document('', { InputJax: tex, OutputJax: svg });
+
+const CSS = [
+    'svg a{fill:blue;stroke:blue}',
+    '[data-mml-node="merror"]>g{fill:red;stroke:red}',
+    '[data-mml-node="merror"]>rect[data-background]{fill:yellow;stroke:none}',
+    '[data-frame],[data-line]{stroke-width:70px;fill:none}',
+    '.mjx-dashed{stroke-dasharray:140}',
+    '.mjx-dotted{stroke-linecap:round;stroke-dasharray:0,140}',
+    'use[data-c]{stroke-width:3px}'
+].join('');
+
+function TeXToSVG(str, opts, getWidth) {
     const options = opts ? { ...DEFAULT_OPTIONS, ...opts } : DEFAULT_OPTIONS;
-
-    const ASSISTIVE_MML = false, FONT_CACHE = true, INLINE = false, CSS = false, packages = AllPackages.sort();
-
-    const adaptor = liteAdaptor();
-    const handler = RegisterHTMLHandler(adaptor);
-    if (ASSISTIVE_MML) AssistiveMmlHandler(handler);
-
-    const tex = new TeX({ packages });
-    const svg = new SVG({ fontCache: (FONT_CACHE ? 'local' : 'none') });
-    const html = mathjax.document('', { InputJax: tex, OutputJax: svg });
 
     const node = html.convert(str, {
         display: !INLINE,
@@ -34,12 +44,15 @@ function TeXToSVG(str, opts) {
         containerWidth: options.width
     });
 
-    const svgString = CSS ? adaptor.textContent(svg.styleSheet(html)) : adaptor.outerHTML(node);
+    let svgString = adaptor.innerHTML(node);
+    svgString = svgString.replace(/<defs>/, `<defs><style>${CSS}</style>`)
+    
+    if (getWidth) {
+        const svgWidth = node.children[0].attributes.viewBox.split(' ')[2];
+        return {svgString, svgWidth};
+    }
 
-    return svgString.replace(
-        /<mjx-container.*?>(.*)<\/mjx-container>/gi,
-        "$1"
-    );
+    return svgString;
 }
 
 module.exports = TeXToSVG;
