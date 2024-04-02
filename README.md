@@ -27,7 +27,7 @@ const options = {
     em: 16
 };
 
-const SVGEquation = MMLToSVG(myTeXEquation, options); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
+const SVGEquation = TeXToSVG(myTeXEquation, options); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
 ```
 
 ### TS (without the `options` parameter)
@@ -37,12 +37,12 @@ import TeXToSVG from "tex-to-svg";
 
 const myTeXEquation = "\\frac{n!}{k!(n-k)!} = \\binom{n}{k}";
 
-const SVGEquation = MMLToSVG(myTeXEquation); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
+const SVGEquation = TeXToSVG((myTeXEquation); // returns <svg style="vertical-align: -2.172ex" xmlns="http://www.w3.org/2000/svg" width="18.199ex" height="5.451ex" role="img" focusable="false" viewBox="0 -1449.5 8044 2409.5" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path ...
 ```
 
 ## Documentation
 
-`MMLToSVG(equation, options)` : **string** _The returned Scalable Vector Graphics equation_
+`TeXToSVG(equation, options)` : **string** _The returned Scalable Vector Graphics equation_
 
 > `equation` : **string** _The TeX equation_
 >
